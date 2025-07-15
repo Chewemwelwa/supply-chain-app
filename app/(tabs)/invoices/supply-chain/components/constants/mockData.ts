@@ -1,0 +1,231 @@
+export const mockInvoices = [
+  {
+    id: "INV-001",
+    date: "2025-07-10",
+    dueDate: "2025-07-24",
+    farmer: {
+      id: "F001",
+      name: "John Mulenga",
+      location: "Chongwe, Lusaka",
+      phone: "+260 97 1234567",
+    },
+    buyer: {
+      id: "B001",
+      name: "Zambeef Products PLC",
+      location: "Lusaka",
+    },
+    items: [
+      {
+        id: "P001",
+        name: "Maize",
+        quantity: 1500,
+        unit: "kg",
+        pricePerUnit: 2.5,
+      },
+      {
+        id: "P002",
+        name: "Soya Beans",
+        quantity: 500,
+        unit: "kg",
+        pricePerUnit: 4.2,
+      },
+    ],
+    status: "pending" as const,
+    totalAmount: 5850,
+    currency: "ZMW",
+    blockchainHash: "0x7f9e8d7c6b5a4c3d2e1f0a9b8c7d6e5f4a3b2c1d",
+  },
+  {
+    id: "INV-002",
+    date: "2025-07-08",
+    dueDate: "2025-07-22",
+    farmer: {
+      id: "F002",
+      name: "Mary Banda",
+      location: "Kabwe, Central",
+      phone: "+260 96 7654321",
+    },
+    buyer: {
+      id: "B002",
+      name: "National Milling Corporation",
+      location: "Lusaka",
+    },
+    items: [
+      {
+        id: "P003",
+        name: "Wheat",
+        quantity: 2000,
+        unit: "kg",
+        pricePerUnit: 3.0,
+      },
+    ],
+    status: "approved" as const,
+    totalAmount: 6000,
+    currency: "ZMW",
+    blockchainHash: "0x1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s",
+  },
+  {
+    id: "INV-003",
+    date: "2025-07-05",
+    dueDate: "2025-07-19",
+    farmer: {
+      id: "F003",
+      name: "David Tembo",
+      location: "Mazabuka, Southern",
+      phone: "+260 95 1122334",
+    },
+    buyer: {
+      id: "B001",
+      name: "Zambeef Products PLC",
+      location: "Lusaka",
+    },
+    items: [
+      {
+        id: "P004",
+        name: "Sugarcane",
+        quantity: 5000,
+        unit: "kg",
+        pricePerUnit: 1.8,
+      },
+    ],
+    status: "paid" as const,
+    totalAmount: 9000,
+    currency: "ZMW",
+    blockchainHash: "0x9s8r7q6p5o4n3m2l1k0j9i8h7g6f5e4d3c2b1a",
+  },
+];
+
+export const mockFarmers = [
+  {
+    id: "F001",
+    name: "John Mulenga",
+    location: "Chongwe, Lusaka",
+    phone: "+260 97 1234567",
+    crops: ["Maize", "Soya Beans", "Groundnuts"],
+    farmSize: "5 hectares",
+    registrationDate: "2023-01-15",
+  },
+  {
+    id: "F002",
+    name: "Mary Banda",
+    location: "Kabwe, Central",
+    phone: "+260 96 7654321",
+    crops: ["Wheat", "Barley"],
+    farmSize: "8 hectares",
+    registrationDate: "2023-02-20",
+  },
+  {
+    id: "F003",
+    name: "David Tembo",
+    location: "Mazabuka, Southern",
+    phone: "+260 95 1122334",
+    crops: ["Sugarcane", "Cassava"],
+    farmSize: "12 hectares",
+    registrationDate: "2023-03-10",
+  },
+];
+
+export const mockBuyers = [
+  {
+    id: "B001",
+    name: "Zambeef Products PLC",
+    location: "Lusaka",
+    industry: "Food Processing",
+    contactPerson: "Sarah Mutale",
+    phone: "+260 97 8765432",
+  },
+  {
+    id: "B002",
+    name: "National Milling Corporation",
+    location: "Lusaka",
+    industry: "Grain Processing",
+    contactPerson: "Michael Phiri",
+    phone: "+260 96 5432109",
+  },
+  {
+    id: "B003",
+    name: "Zambia Sugar PLC",
+    location: "Mazabuka",
+    industry: "Sugar Processing",
+    contactPerson: "Elizabeth Zulu",
+    phone: "+260 95 9876543",
+  },
+];
+
+export const mockProducts = [
+  { id: "P001", name: "Maize", unit: "kg", averagePrice: 2.5 },
+  { id: "P002", name: "Soya Beans", unit: "kg", averagePrice: 4.2 },
+  { id: "P003", name: "Wheat", unit: "kg", averagePrice: 3.0 },
+  { id: "P004", name: "Sugarcane", unit: "kg", averagePrice: 1.8 },
+  { id: "P005", name: "Groundnuts", unit: "kg", averagePrice: 5.5 },
+  { id: "P006", name: "Cassava", unit: "kg", averagePrice: 2.0 },
+  { id: "P007", name: "Barley", unit: "kg", averagePrice: 3.2 },
+  { id: "P008", name: "Rice", unit: "kg", averagePrice: 4.0 },
+];
+
+export const mockTransactions = [
+  {
+    id: "T001",
+    invoiceId: "INV-003",
+    date: "2025-07-12",
+    amount: 9000,
+    currency: "ZMW",
+    paymentMethod: "Mobile Money",
+    status: "completed" as const,
+    blockchainHash: "0x3f4g5h6i7j8k9l0m1n2o3p4q5r6s7t8u9v0w1x",
+  },
+  {
+    id: "T002",
+    invoiceId: "INV-002",
+    date: "2025-07-15",
+    amount: 6000,
+    currency: "ZMW",
+    paymentMethod: "Bank Transfer",
+    status: "processing" as const,
+    blockchainHash: "0x2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1",
+  },
+];
+
+export const mockSupplyChainEvents = [
+  {
+    id: "SC001",
+    productId: "P001",
+    farmerId: "F001",
+    event: "Harvested",
+    location: "Chongwe, Lusaka",
+    timestamp: "2025-07-01T08:30:00Z",
+    details: "Maize harvested from Field A",
+    blockchainHash: "0x1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0",
+  },
+  {
+    id: "SC002",
+    productId: "P001",
+    farmerId: "F001",
+    event: "Quality Check",
+    location: "Chongwe, Lusaka",
+    timestamp: "2025-07-02T10:15:00Z",
+    details: "Moisture content: 12%, Quality grade: A",
+    blockchainHash: "0x2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1",
+  },
+  {
+    id: "SC003",
+    productId: "P001",
+    farmerId: "F001",
+    event: "Transport",
+    location: "En route to Lusaka",
+    timestamp: "2025-07-03T07:45:00Z",
+    details: "Transported via truck LT-456-ZM",
+    blockchainHash: "0x3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2",
+  },
+  {
+    id: "SC004",
+    productId: "P001",
+    farmerId: "F001",
+    buyerId: "B001",
+    event: "Delivery",
+    location: "Zambeef Products PLC, Lusaka",
+    timestamp: "2025-07-03T14:20:00Z",
+    details: "Delivered to warehouse, receipt #ZB-7890",
+    blockchainHash: "0x4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3",
+  },
+];
