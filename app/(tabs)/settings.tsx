@@ -57,7 +57,7 @@ export default function SettingsScreen() {
         </View>
         <Button
           title="Edit Profile"
-          onPress={() => {}}
+          onPress={() => router.push("/settings/edit-profile")}
           variant="outline"
           size="small"
         />
@@ -68,19 +68,19 @@ export default function SettingsScreen() {
         {renderSettingItem(
           <User size={22} color={Colors.primary} />,
           "Personal Information",
-          () => {},
+          () => router.push("/settings/personal-info"),
           "Update your personal details"
         )}
         {renderSettingItem(
           <Lock size={22} color={Colors.primary} />,
           "Security",
-          () => {},
+          () => router.push("/settings/security"),
           "Manage password and security settings"
         )}
         {renderSettingItem(
           <Bell size={22} color={Colors.primary} />,
           "Notifications",
-          () => {},
+          () => router.push("/settings/notifications"),
           "Configure notification preferences"
         )}
       </View>
@@ -90,13 +90,13 @@ export default function SettingsScreen() {
         {renderSettingItem(
           <Shield size={22} color={Colors.primary} />,
           "Blockchain Wallet",
-          () => {},
+          () => router.push("/settings/blockchain-wallet"),
           "Manage your blockchain wallet and keys"
         )}
         {renderSettingItem(
           <Info size={22} color={Colors.primary} />,
           "Transaction History",
-          () => {},
+          () => router.push("/settings/transaction-history"),
           "View your blockchain transaction history"
         )}
       </View>
